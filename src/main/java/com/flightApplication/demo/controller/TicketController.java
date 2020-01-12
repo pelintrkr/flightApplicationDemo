@@ -75,7 +75,7 @@ public class TicketController {
 		}
 	}
 
-	@GetMapping("/searchTicket/{passengerId}")
+	@PostMapping("/searchTicket/{passengerId}")
 	public List<Ticket> searchRoute(@PathVariable("passengerId") final String passengerId) {
 		return ticketRepository.findticketByPassengerId(passengerId);
 	}
